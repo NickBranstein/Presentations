@@ -1,0 +1,19 @@
+<h2 class="center">Welcome to Jokes-Ng!</h2>
+<div class="row">
+    <div class="col-md-12 center">
+        <button class="btn btn-primary" (click)="randomClick()">Random Joke</button>
+    </div>
+</div>
+<br />
+<div class="row center">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-info" [hidden]="!showJoke">
+            <div class="panel-heading">
+                {{ joke?.Setup }}
+            </div>
+            <div class="panel-body">
+                {{ joke?.Punchline }}
+            </div>
+        </div>
+    </div>
+</div>
