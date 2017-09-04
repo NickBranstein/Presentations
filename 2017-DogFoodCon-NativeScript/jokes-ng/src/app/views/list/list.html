@@ -1,0 +1,14 @@
+<h2 class="center">All Jokes</h2>
+<br />
+<div class="row" *ngFor="let joke of allJokes()">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <a role="button" data-toggle="collapse" aria-expanded="false" [href]="'#joke' + joke.Id">{{ joke.Setup }}</a>
+            </div>
+            <div class="panel-body collapse" [id]="'joke' + joke.Id">
+                {{ joke.Punchline }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 import { JokeService } from '../../services/jokeService';
 import { Joke } from '../../models/joke';
 
@@ -12,7 +13,7 @@ export class HomeComponent {
     showJoke: boolean = false;
     joke: Joke;
 
-    constructor(private jokeService: JokeService) {
+    constructor(private jokeService: JokeService, private router: Router) {
         this.showJoke = false;
     }
   
@@ -20,5 +21,9 @@ export class HomeComponent {
         this.joke = this.jokeService.random();
 
         this.showJoke = true;
+    }
+
+    allJokesClick() {
+        this.router.navigate(['list']);
     }
 }

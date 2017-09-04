@@ -1,4 +1,4 @@
 export class Joke {
-    constructor(Id: number, public Setup: string, public Punchline: string) {
+    constructor(public Id: number, public Setup: string, public Punchline: string) {
     }
 }

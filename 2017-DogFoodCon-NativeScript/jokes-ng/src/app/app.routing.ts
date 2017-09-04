@@ -1,12 +1,13 @@
 import { HomeComponent } from "./views/home/home.component";
-// import { ScoreboardComponent } from "./views/scoreboard/scoreboard.component";
-// import { PlayerCardComponent } from "./views/playerCard/playerCard.component";
+import { ListComponent } from "./views/list/list.component";
 
 export const routes: any = [
   { path: "", component: HomeComponent },
-  { path: "home", component: HomeComponent }
+  { path: "home", component: HomeComponent },
+  { path: "list", component: ListComponent }
 ];
 
 export const navigatableComponents: any = [
-  HomeComponent
+  HomeComponent,
+  ListComponent
 ];

@@ -7,17 +7,16 @@ export class JokeService{
     
     constructor() {
         this.jokes = [
-            new Joke(1, 'joke1', 'punchline 1'),
-            new Joke(2, 'joke2', 'punchline 2'),
-            new Joke(3, 'joke3', 'punchline 3'),
-            new Joke(4, 'joke4', 'punchline 4'),
-            new Joke(5, 'joke5', 'punchline 5'),
-            new Joke(6, 'joke6', 'punchline 6'),
-            new Joke(7, 'joke7', 'punchline 7'),
-            new Joke(8, 'joke8', 'punchline 8'),
-            new Joke(9, 'joke9', 'punchline 9'),
-            new Joke(10, 'joke10', 'punchline 10'),
-            new Joke(11, 'joke11', 'punchline 11')
+            new Joke(1, 'What has four wheels and flies?', 'A garbage truck.'),
+            new Joke(2, 'Why can\'t dinosaurs clap?', 'Because they are dead.'),
+            new Joke(3, 'Why do scuba divers fall backwards out of the boat? ', 'Because if they fell forward they\'d still be in the boat.'),
+            new Joke(4, 'What\'s E.T. short for?', 'Because he\'s got little legs.'),
+            new Joke(5, 'Have you ever tried eating a clock?', 'It\'s really time consuming.'),
+            new Joke(6, 'Why does a chicken coop have two doors?', 'If it had four it would be a chicken sedan.'),
+            new Joke(7, 'How do you fix a jack-o-lantern?', 'With a pumpkin patch.'),
+            new Joke(8, 'Why can\'t you trust an atom?', 'Because they make up everything.'),
+            new Joke(9, 'What\'s the object-oriented way to become wealthy?', 'Inheritance.'),
+            new Joke(10, 'What is a programmer\'s favorite hangout place?', 'Foo Bar.')
         ];
         
     }
@@ -27,7 +26,6 @@ export class JokeService{
     }
 
     random(): Joke{
-
         return this.jokes[Math.floor(Math.random() * this.jokes.length)];
     }
 }
