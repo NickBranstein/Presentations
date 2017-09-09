@@ -10,9 +10,9 @@
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-info" [hidden]="!showJoke">
             <div class="panel-heading">
-                {{ joke?.Setup }}
+                <div class="btn btn-link" (click)="showPunchlineClick()">{{ joke?.Setup }}</div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" [hidden]="!showPunchline">
                 {{ joke?.Punchline }}
             </div>
         </div>
