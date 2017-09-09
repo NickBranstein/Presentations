@@ -7,6 +7,9 @@
     "id": "org.nativescript.jokestns",
     "tns-ios": {
       "version": "3.1.0"
+    },
+    "tns-android": {
+      "version": "3.2.0"
     }
   },
   "dependencies": {
@@ -26,6 +29,10 @@
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "lazy": "1.0.11",
     "nativescript-dev-typescript": "~0.5.0",
     "typescript": "~2.4.2"
   }
