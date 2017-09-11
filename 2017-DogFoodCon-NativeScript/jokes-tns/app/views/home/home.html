@@ -1,3 +1,13 @@
 <StackLayout>
-    
+    <StackLayout orientation="vertical" class="p-5">
+        <Label class="m-x-auto h2" text="Welcome to Jokes NS!"></Label>
+        <StackLayout class="m-x-auto" orientation="horizontal">
+            <Button class="btn btn-primary" (tap)="randomClick()" text="Random Joke"></Button>
+            <Button class="btn btn-link" (tap)="allJokesClick()" text="All Jokes"></Button>
+        </StackLayout>
+        <StackLayout class="panel" orientation="vertical" [visibility]="showJoke ? 'visible' : 'collapse'">
+            <Label class="text-center panel-heading" textWrap="true" [text]="joke?.Setup"></Label>
+            <Label class="text-center panel-body input-border" textWrap="true" [text]="joke?.Punchline"></Label>
+        </StackLayout>
+    </StackLayout>
 </StackLayout>
