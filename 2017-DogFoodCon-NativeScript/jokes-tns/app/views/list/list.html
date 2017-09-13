@@ -1,0 +1,12 @@
+<ScrollView>
+    <StackLayout orientation="vertical" class="p-5">
+        <Label class="m-x-auto h2" text="All Jokes"></Label>
+        <StackLayout *ngFor="let item of allJokes()" class="panel list-group-item" orientation="vertical">
+            <Label class="text-center panel-heading" textWrap="true" [text]="item?.Setup" (tap)="onItemTap(item)"></Label>
+            <Label class="text-center panel-body input-border" 
+                textWrap="true" [visibility]="item?.Visible ? 'visible' : 'collapse'"
+                [text]="item?.Punchline">
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

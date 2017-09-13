@@ -8,11 +8,15 @@ import { Joke } from '../../models/joke';
   styleUrls: ['views/list/list.css'],
   providers: [JokeService]
 })    
-export class ListComponent {
+export class ListComponent {   
     constructor(private jokeService: JokeService) {
     }
 
     allJokes(): Array<Joke> {
         return this.jokeService.all();
     }
+
+    onItemTap(joke: Joke): void {
+        joke.Visible = !joke.Visible;
+      }
 }

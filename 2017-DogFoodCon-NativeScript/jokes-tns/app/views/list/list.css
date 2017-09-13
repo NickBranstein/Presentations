@@ -1,0 +1,15 @@
+.panel-heading {
+    background-color: #d9edf7;
+    color: #31708f;
+}
+
+.panel {
+    border-color: #bce8f1;
+    border-width: 1px;
+    border-radius: 3px;
+    
+}
+
+.panel-body {
+    min-height: 250px;
+}
