@@ -24,7 +24,8 @@ export class JokeService{
             new Joke(15, 'Why do you never see elephants hiding in trees?', 'Because they\'re so good at it!'),
             new Joke(16, 'Want to hear a joke about paper?', 'Nevermind, it is terrible.'),
             new Joke(17, 'Did you hear about the guy that got hit in the head with a soda can?', 'He was lucky it was a soft drink.'),
-            new Joke(18, 'Why don\'t programmers like nature?', 'It has too many bugs.')
+            new Joke(18, 'Why don\'t programmers like nature?', 'It has too many bugs.'),
+            new Joke(19, 'What kind of exercise do lazy people do?', 'Diddly squats.')
         ];
     }
 
