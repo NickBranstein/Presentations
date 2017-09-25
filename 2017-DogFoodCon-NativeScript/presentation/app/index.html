@@ -122,13 +122,13 @@
                 </section>
                 <section>
                     <h3>Reusable Pieces</h3>
-                    <p class="fragment">Services</p>
+                    <p class="fragment">Services & Models</p>
                     <p class="fragment">Routing</p>
                     <p class="fragment">Component Logic</p>
                     <p class="fragment">Databinding Syntax</p>
                 </section>
                 <section>
-                    <h3>Different Pieces</h3>
+                    <h3>Non-Reusable Pieces</h3>
                     <p class="fragment">Component UI</p>
                     <p class="fragment">Module Bootstrap</p>
                 </section>
@@ -139,6 +139,20 @@
                 <section>
                     <h3>Scaffold a NativeScript with Angular Project</h3>
                     <p>tns create jokes-tns --template nativescript-template-ng-tutorial</p>
+                </section>
+                <section>
+                    <h3>Bootstrap the App</h3>
+                    <p class="fragment">Angular</p>
+                    <p class="fragment">import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+                        import { AppModule } from './app/app.module';
+                        
+                        platformBrowserDynamic().bootstrapModule(AppModule);</p>
+                    <p class="fragment">NativeScript with Angular</p>
+                    <p class="fragment">import { platformNativeScriptDynamic } from "nativescript-angular/platform";
+                        import { AppModule } from "./app.module";
+                        
+                        platformNativeScriptDynamic().bootstrapModule(AppModule);</p>
+                    
                 </section>
             </section>
             <section>
