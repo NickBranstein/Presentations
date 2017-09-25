@@ -6,8 +6,10 @@
             <Button class="btn btn-link" (tap)="allJokesClick()" text="All Jokes"></Button>
         </StackLayout>
         <StackLayout class="panel" orientation="vertical" [visibility]="showJoke ? 'visible' : 'collapse'">
-            <Label class="text-center panel-heading" textWrap="true" [text]="joke?.Setup"></Label>
-            <Label class="text-center panel-body input-border" textWrap="true" [text]="joke?.Punchline"></Label>
+            <Label class="text-center panel-heading" textWrap="true" 
+            (tap)="showPunchlineClick()" [text]="joke?.Setup"></Label>
+            <Label class="text-center panel-body input-border" textWrap="true" 
+            [visibility]="showPunchline ? 'visible' : 'collapse'" [text]="joke?.Punchline"></Label>
         </StackLayout>
     </StackLayout>
 </StackLayout>
