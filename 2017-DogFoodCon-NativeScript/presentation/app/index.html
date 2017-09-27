@@ -134,31 +134,180 @@
                 </section>
                 <section>
                     <h3>Install NativeScript</h3>
-                    <p>npm install -g nativescript</p>
+                    <pre class="fragment"><code data-trim class="c#">
+npm install -g nativescript
+                    </code></pre>
                 </section>
                 <section>
                     <h3>Scaffold a NativeScript with Angular Project</h3>
-                    <p>tns create jokes-tns --template nativescript-template-ng-tutorial</p>
+                    <pre class="fragment"><code data-trim class="c#">
+tns create jokes-tns 
+    --template nativescript-template-ng-tutorial
+                    </code></pre>
                 </section>
                 <section>
                     <h3>Bootstrap the App</h3>
                     <p class="fragment">Angular</p>
-                    <p class="fragment">import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-                        import { AppModule } from './app/app.module';
-                        
-                        platformBrowserDynamic().bootstrapModule(AppModule);</p>
+                    <pre style="width: 100%;" class="fragment"><code data-trim class="c#">
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+                    </code></pre>
                     <p class="fragment">NativeScript with Angular</p>
-                    <p class="fragment">import { platformNativeScriptDynamic } from "nativescript-angular/platform";
-                        import { AppModule } from "./app.module";
-                        
-                        platformNativeScriptDynamic().bootstrapModule(AppModule);</p>
-                    
+                    <pre style="width: 100%;" class="fragment"><code data-trim class="c#">
+import { platformNativeScriptDynamic } from "nativescript-angular/platform";
+import { AppModule } from "./app.module";
+
+platformNativeScriptDynamic().bootstrapModule(AppModule);
+                    </code></pre>
                 </section>
             </section>
             <section>
                 <section>
+                        <h3>Routing and Home Component</h3>
+                </section>
+                <section>
+                    <h3>Routing</h3>
+                    <pre><code data-trim class="c#">
+import { HomeComponent } from "./views/home/home.component";
+
+export const routes: any = [
+    { path: "", component: HomeComponent },
+    { path: "home", component: HomeComponent }
+];
+
+export const navigatableComponents: any = [
+    HomeComponent
+];
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Routing Cont...</h3>
+                    <p>Connect NativeScript navigation to Angular routing</p>
+                    <pre style="width: 100%;"><code data-trim class="c#">
+import { NativeScriptRouterModule } from "nativescript-angular/router";
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Home Component</h3>
+                    <p>Surprise, it's the same!</p>
+                    <img src="images/surprise.gif" height="300px"/>
+                </section>
+                <section>
+                    <h3>Home Component Cont...</h3>
+                    <pre><code data-trim class="c#">
+import { Component } from '@angular/core';
+import { Router } from "@angular/router";
+
+@Component({
+    selector: 'home',
+    templateUrl: 'views/home/home.html',
+    styleUrls: ['views/home/home.css']
+})    
+export class HomeComponent {
+    constructor() {
+
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Home UI</h3>
+                    <p class="fragment">Time to use NativeScript components</p>
+                    <p class="fragment">StackLayout -> div</p>
+                    <p class="fragment">Label, TextField, Button, etc.</p>
+                    <p class="fragment">Model, Services, Data Binding are all the same!</p>
+                </section>
+                <section>
+                    <h3>Home UI Cont...</h3>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltStackLayout&gt
+&ltStackLayout orientation="vertical" class="p-5"&gt
+    &ltLabel class="m-x-auto h2" text="Welcome to Jokes NS!"&gt&lt/Label&gt
+    &ltStackLayout class="m-x-auto" orientation="horizontal"&gt
+        &ltButton class="btn btn-primary" text="Random Joke"&gt&lt/Button&gt
+        &ltButton class="btn btn-link" text="All Jokes"&gt&lt/Button&gt
+    &lt/StackLayout&gt
+    &ltStackLayout class="panel" orientation="vertical"&gt
+        &ltLabel class="text-center panel-heading"&gt&lt/Label&gt
+        &ltLabel class="text-center panel-body input-border"&gt&lt/Label&gt
+    &lt/StackLayout&gt
+&lt/StackLayout&gt
+&lt/StackLayout&gt
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Home UI Bindings</h3>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltStackLayout&gt
+&ltStackLayout orientation="vertical" class="p-5"&gt
+    &ltLabel class="m-x-auto h2" text="Welcome to Jokes NS!"&gt&lt/Label&gt
+    &ltStackLayout class="m-x-auto" orientation="horizontal"&gt
+        &ltButton class="btn btn-primary" (tap)="randomClick()" 
+        text="Random Joke"&gt&lt/Button&gt
+        &ltButton class="btn btn-link" (tap)="allJokesClick()" 
+        text="All Jokes"&gt&lt/Button&gt
+    &lt/StackLayout&gt
+    &ltStackLayout class="panel" orientation="vertical" 
+        [visibility]="showJoke ? 'visible' : 'collapse'"&gt
+        &ltLabel class="text-center panel-heading" textWrap="true" 
+            (tap)="showPunchlineClick()" [text]="joke?.Setup"&gt&lt/Label&gt
+        &ltLabel class="text-center panel-body input-border" textWrap="true" 
+            [visibility]="showPunchline ? 'visible' : 'collapse'" 
+            [text]="joke?.Punchline"&gt&lt/Label&gt
+    &lt/StackLayout&gt
+&lt/StackLayout&gt
+&lt/StackLayout&gt
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Ya but...</h3>
+                    <p>Sevices, code behind, and models have to be difficult right?</p>
+                    <img src="images/troll.gif" height="300px"/>
+                </section>
+                <section>
+                    <h3>Nope!</h3>
+                    <p>Let's take a closer look</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Putting It All Together</h3>
+                </section>
+                <section>
+                    <h3>List Component</h3>
+                    <p>Angular directives such as ngFor</p>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltScrollView&gt
+&ltStackLayout orientation="vertical" class="p-5"&gt
+    &ltLabel class="m-x-auto h2" text="All Jokes"&gt&lt/Label&gt
+    &ltStackLayout *ngFor="let item of allJokes()"
+        class="panel list-group-item" orientation="vertical"&gt
+        &ltLabel class="text-center panel-heading" textWrap="true" 
+            [text]="item?.Setup" (tap)="onItemTap(item)"&gt&lt/Label&gt
+        &ltLabel class="text-center panel-body input-border" 
+            textWrap="true" 
+            [visibility]="item?.Visible ? 'visible' : 'collapse'"
+            [text]="item?.Punchline"&gt
+        &lt/Label&gt
+    &lt/StackLayout&gt
+&lt/StackLayout&gt
+&lt/ScrollView&gt
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>The Finished Product</h3>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>In Closing</h3>
+                    <p>Insert Joke Here</p>
+                </section>
+                <section>
                     <h3>The NativeScript Book</h3>
-                    <a href="https://www.nativescript.org/book">https://www.nativescript.org/bookn</a>
+                    <a href="https://www.nativescript.org/book">https://www.nativescript.org/book</a>
                     <p>Available now!</p>
                     <img src="images/TheNativeScriptBook-Cover.png" height="400px"/>
                 </section>

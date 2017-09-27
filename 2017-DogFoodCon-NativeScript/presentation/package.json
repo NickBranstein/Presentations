@@ -1,7 +1,7 @@
 {
-  "name": "2016-DogFoodCon-Hangfire",
+  "name": "2017-DogFoodCon-NativeScript",
   "version": "1.0.0",
-  "description": "Hangfire Presentation for DogFoodCon 2016",
+  "description": "NativeScript Presentation for DogFoodCon 2017",
   "author": "Nick Branstein <nick@brosteins.com>",
   "license": "MIT",
   "devDependencies": {
