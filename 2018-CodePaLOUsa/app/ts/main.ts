@@ -1,0 +1,2 @@
+Reveal.initialize();
+hljs.initHighlightingOnLoad();
