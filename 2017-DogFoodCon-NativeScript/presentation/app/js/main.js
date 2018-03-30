@@ -1,0 +1,4 @@
+Reveal.initialize();
+hljs.initHighlightingOnLoad();
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFDLFVBQVUsRUFBRSxDQUFDO0FBQ3BCLElBQUksQ0FBQyxzQkFBc0IsRUFBRSxDQUFDIiwiZmlsZSI6Im1haW4uanMiLCJzb3VyY2VSb290IjoiL3RzIn0=
