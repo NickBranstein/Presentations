@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="reveal/css/reveal.css" />
+    <link rel="stylesheet" type="text/css" href="reveal/lib/css/zenburn.css" />
+    <link rel="stylesheet" type="text/css" href="reveal/css/theme/league.css" />
+</head>
+<style>
+    .left {
+        float: left;
+        max-width: 40%;
+    }
+
+    .right {
+        float: right;
+    }
+</style>
+<body>
+    <script src="reveal/js/reveal.js"></script>
+    <script src="reveal/plugin/highlight/highlight.js"></script>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div style="float: left; width: 60%">
+                    <h3>NativeScript and Angular</h3>
+                    <p>Nick Branstein</p>
+                </div>
+                <div style="float: right;">
+                    <img src="images/nativescript-loves-angular.png" height="100px" />
+                </div>
+            </section>
+            <section>
+                <p>Everyone loves bad jokes right?</p>
+                <img src="images/jackolantern.jpg" height="400px"/>
+            </section>
+            
+            <section>
+                <section>
+                    <h3>NativeScript and Angular Crossover</h3>
+                    <img src="images/NSwAngular.png" height="400px"/>
+                </section>
+                <section>
+                    <h3>UI Components Overview</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>HTML</th>
+                                <th>NativeScript</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fragment">
+                                <td>div, span</td>
+                                <td>layouts: stack, grid, wrap, absolute + more</td>
+                            </tr>
+                            <tr class="fragment">
+                                <td>label, p / h / other text</td>
+                                <td>label</td>
+                            </tr>
+                            <tr class="fragment">
+                                <td>button, input</td>
+                                <td>button, textfield</td>
+                            </tr>
+                            <tr class="fragment">
+                                <td></td>
+                                <td>datepicker, listview, listpicker + more</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Component Example</h3>
+                    <p>Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltdiv class="row"&gt
+&ltdiv class="col-md-12 center"&gt
+    &ltbutton class="btn btn-primary"&gtRandom Joke&lt/button&gt
+                    </code></pre>
+                    <p>NativeScript with Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltStackLayout orientation="vertical"&gt
+    &ltLabel text="Welcome to Jokes NS!"&gt&lt/Label&gt
+    &ltStackLayout orientation="horizontal"&gt
+        &ltButton text="Random Joke"&gt&lt/Button&gt
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Routing Example</h3>
+                    <p>Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="c#">
+import { RouterModule } from '@angular/router';
+                    </code></pre>
+                    <p>NativeScript with Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="c#">
+import { NativeScriptRouterModule } from "nativescript-angular/router";
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Data Binding Example</h3>
+                    <p>Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltdiv class="row"&gt
+&ltdiv class="col-md-12 center"&gt
+    &ltbutton class="btn btn-primary" (click)="randomClick()"&gtRandom Joke&lt/button&gt
+                    </code></pre>
+                    <p>NativeScript with Angular</p>
+                    <pre style="width: 100%;"><code data-trim class="xml">
+&ltStackLayout orientation="vertical"&gt
+    &ltLabel text="Welcome to Jokes NS!"&gt&lt/Label&gt
+    &ltStackLayout orientation="horizontal"&gt
+        &ltButton text="Random Joke" (tap)="randomClick()"&gt&lt/Button&gt
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>In Closing</h3>
+                    <img src="images/dogjoke.jpg" height="400px"/>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <!-- build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
