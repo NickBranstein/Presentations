@@ -16,7 +16,6 @@ gulp.task('sass', function () {
     return gulp.src("app/scss/**/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("app/css"))
-        .pipe(browserSync.reload({ stream: true }))
 });
 
 function revealCss(cb) {
@@ -48,17 +47,9 @@ function revealPlugin(cb) {
 }
 
 gulp.task('reveal', function (cb) {
-    gulp.parallel(revealCss, revealJs, revealLib, revealPlugin);
+    gulp.parallel(revealCss, revealJs, revealLib, revealPlugin)();
+    
     cb();
-});
-
-gulp.task('browserSync', function () {
-    browserSync.init({
-        server: {
-            baseDir: "app"
-        },
-        open: false
-    })
 });
 
 gulp.task('useref', function () {
@@ -88,33 +79,23 @@ gulp.task('cache:clear', function (callback) {
     return cache.clearAll(callback)
 });
 
-gulp.task('typescript', function () {
-    var tsResult = tsProject.src()
-        .pipe(sourcemaps.init())
-        .pipe(tsProject());
-    return tsResult.js
-        .pipe(sourcemaps.write({
-            sourceRoot: '/ts',
-            includeContent: false
-        }))
-        .pipe(gulp.dest('app/js'));
-});
+gulp.task('watch', function () {
+    browserSync.init({
+        server: {
+            baseDir: "app"
+        },
+        open: false
+    })
 
-gulp.task('watch', gulp.series('browserSync', 'sass', 'typescript'), function () {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
-    gulp.watch('app/ts/**/*.ts', ['typescript']);
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('build', function (cb) {
     gulp.series(
         'clean:dist',
-        'typescript',
-        'sass',
         'reveal',
-        gulp.series('useref', 'images', 'fonts'));
-    
+        'sass',
+        gulp.series('useref', 'images', 'fonts'))();
     cb();
 });
 
