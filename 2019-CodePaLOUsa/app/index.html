@@ -24,94 +24,128 @@
         <div class="slides">
             <section>
                 <div style="float: left; width: 60%">
-                    <h3>Pokemon or Magic Card??</h3>
+                    <h3>Magic or Pokemon Card?</h3>
                     <p>Nick Branstein</p>
                 </div>
                 <div style="float: right;">
-                    <img src="images/nativescript-loves-angular.png" height="100px" />
+                    <img src="images/cards.png" height="200px" />
                 </div>
             </section>
+            
             <section>
-                <p>Everyone loves bad jokes right?</p>
-                <img src="images/jackolantern.jpg" height="400px"/>
+                <p>What did one Geodude say to the other Geodude?</p>
+                <img src="images/geodude.png" />
+            </section>
+
+            <section>
+                <section>
+                    <h3>Story Time</h3>
+                </section>
+                <section>
+                    <p>In the beginning...</p>
+                    <img src="images/collection1.png" height="400px" />
+                </section>
+                <section>
+                    <p>Then there were more...</p>
+                    <img src="images/collection2.png" height="400px" />
+                </section>
+                <section>
+                    <p>How about Pokemon now?</p>
+                    <img src="images/collection3.png" height="400px" />
+                </section>
+                <section>
+                    <p>This is getting out of hand...</p>
+                    <img src="images/collection4.png" height="400px" />
+                </section>
+                <section>
+                    <p>Solution?</p>
+                    <h4>🤔</h1>
+                    <img src="images/solution.png" height="400px" />
+                </section>
             </section>
             
             <section>
                 <section>
-                    <h3>NativeScript and Angular Crossover</h3>
-                    <img src="images/NSwAngular.png" height="400px"/>
+                    <h3>Azure Cognitive Services</h3>
                 </section>
                 <section>
-                    <h3>UI Components Overview</h3>
+                    <p>Collection of machine learning algorithms implemented for you to use</p>
                     <table>
-                        <thead>
-                            <tr>
-                                <th>HTML</th>
-                                <th>NativeScript</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr class="fragment">
-                                <td>div, span</td>
-                                <td>layouts: stack, grid, wrap, absolute + more</td>
+                                <td>Intelligent search</td>
                             </tr>
                             <tr class="fragment">
-                                <td>label, p / h / other text</td>
-                                <td>label</td>
+                                <td>Natural language processing</td>
                             </tr>
                             <tr class="fragment">
-                                <td>button, input</td>
-                                <td>button, textfield</td>
+                                <td>Text to "natural-sounding" speech</td>
                             </tr>
                             <tr class="fragment">
-                                <td></td>
-                                <td>datepicker, listview, listpicker + more</td>
+                                <td>Vision (image/video recognition)</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
+            </section>
+
+            <section>
                 <section>
-                    <h3>Component Example</h3>
-                    <p>Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="xml">
-&ltdiv class="row"&gt
-&ltdiv class="col-md-12 center"&gt
-    &ltbutton class="btn btn-primary"&gtRandom Joke&lt/button&gt
-                    </code></pre>
-                    <p>NativeScript with Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="xml">
-&ltStackLayout orientation="vertical"&gt
-    &ltLabel text="Welcome to Jokes NS!"&gt&lt/Label&gt
-    &ltStackLayout orientation="horizontal"&gt
-        &ltButton text="Random Joke"&gt&lt/Button&gt
-                    </code></pre>
+                    <h3>Computer Vision</h3>
+                    <p><a href="https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/">
+                        (https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)</a>
+                    </p>
                 </section>
                 <section>
-                    <h3>Routing Example</h3>
-                    <p>Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="c#">
-import { RouterModule } from '@angular/router';
-                    </code></pre>
-                    <p>NativeScript with Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="c#">
-import { NativeScriptRouterModule } from "nativescript-angular/router";
-                    </code></pre>
+                    <p>Cool what's it do?</p>
+                    <img src="images/cool.gif" height="400px" />
                 </section>
                 <section>
-                    <h3>Data Binding Example</h3>
-                    <p>Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="xml">
-&ltdiv class="row"&gt
-&ltdiv class="col-md-12 center"&gt
-    &ltbutton class="btn btn-primary" (click)="randomClick()"&gtRandom Joke&lt/button&gt
-                    </code></pre>
-                    <p>NativeScript with Angular</p>
-                    <pre style="width: 100%;"><code data-trim class="xml">
-&ltStackLayout orientation="vertical"&gt
-    &ltLabel text="Welcome to Jokes NS!"&gt&lt/Label&gt
-    &ltStackLayout orientation="horizontal"&gt
-        &ltButton text="Random Joke" (tap)="randomClick()"&gt&lt/Button&gt
-                    </code></pre>
+                    <p>Find (common) objects and classify them</p>
+                    <img src="images/ex1.png" height="400px" />
+                </section>
+                <section>
+                    <p>Optical character recognition (OCR)</p>
+                    <img src="images/ex2.png" height="400px" />
+                </section>
+                <section>
+                    <p>Brand, celebrities, and landmark recognition</p>
+                    <img src="images/ex3.png" height="400px" />
+                </section>
+                <section>
+                    <p>But? What about my cards?</p>
+                    <img src="images/solution.png" height="400px" />
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Custom Vision</h3>                    
+                </section>
+                <section>
+                    <div class="left">
+                        <p>What we get...</p>
+                        <ul>
+                            <li>Web interface</li>
+                            <li>API endpoint to consume</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <img src="images/customvision.png" height="250px" />    
+                    </div>
+                </section>
+                <section>
+                    <div class="left">
+                        <p>Process</p>
+                        <ul>
+                            <li>Upload (Build the Model)</li>
+                            <li>Train</li>
+                            <li>Evaluate</li>
+                            <li>Repeat</li>
+                        </ul>
+                        </div>
+                        <div class="right">
+                            <img src="images/process.png" height="250px" />    
+                        </div>
                 </section>
             </section>
             <section>
