@@ -49,4 +49,3 @@ platforms
 node_modules
 tns_modules
 .DS_Store
-app/**/*.js
