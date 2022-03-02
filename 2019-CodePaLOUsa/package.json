@@ -18,7 +18,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^3.1.6",
     "gulp-debug": "~4.0.0",
-    "reveal.js": "^3.8.0",
+    "reveal.js": "^4.3.0",
     "typescript": "^3.5.3"
   }
 }
