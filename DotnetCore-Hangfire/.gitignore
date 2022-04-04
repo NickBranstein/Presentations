@@ -1,0 +1,98 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@NickBranstein 
+NickBranstein
+/
+Presentations
+Public
+Code
+Issues
+Pull requests
+10
+Actions
+Projects
+Wiki
+Security
+64
+Insights
+Settings
+We found potential security vulnerabilities in your dependencies.
+Only the owner of this repository can see this message.
+
+Presentations/2019-CodePaLOUsa/.gitignore
+@NickBranstein
+NickBranstein update slides
+Latest commit 7b277f9 on Aug 13, 2019
+ History
+ 1 contributor
+51 lines (43 sloc)  601 Bytes
+   
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+yarn-error.log
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# NativeScript
+hooks
+lib
+platforms
+node_modules
+tns_modules
+.DS_Store
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
