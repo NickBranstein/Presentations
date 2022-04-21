@@ -2,6 +2,11 @@
 
 In this lab you will ensure that everything is setup and running correctly.
 
+## Prerequisites
+These labs were built using dotnetcore 6.
+- dotnetcore - https://dotnet.microsoft.com/en-us/download
+- Alternately you can use a tool like Homebrew to install dotnetcore `brew install dotnet-sdk` 
+
 ## Steps
 If you've made it this far hopefull you'll clone this repo :)
 
