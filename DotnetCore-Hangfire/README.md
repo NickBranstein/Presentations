@@ -8,3 +8,6 @@ The following labs are updated versions (updated for aspnetcore) of a workshop I
 ## What
 
 ## How
+
+## Labs
+- [Getting Started - Lab 1](/lab01/README.md)
