@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Core.Domain;
 
 public class Dashboard
