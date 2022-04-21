@@ -14,3 +14,5 @@ Why are we using Hangfire? Well because it just works. It's extremely easy to se
 ## Labs
 - [Getting Started - Lab 1](./lab01/README.md)
 - [Installing Hangfire - Lab 2](./lab02/README.md)
+
+> Originally these labs were designed to interacted with a database through Entitiy Framework, however, in this version of the labs the database dependencies have been removed and the database interactions are faked. Therefore, everytime the project is launched the Dashboard statistics will be reset.
