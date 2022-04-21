@@ -10,4 +10,4 @@ The following labs are updated versions (updated for aspnetcore) of a workshop I
 ## How
 
 ## Labs
-- [Getting Started - Lab 1](/lab01/README.md)
+- [Getting Started - Lab 1](./lab01/README.md)
